@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Valentine Quest</title>
+    <link rel="icon" type="image/x-icon" href="./images/headTiff.png">
+    <!-- <link rel="icon" type="image/x-icon" href="./images/headKate.png"> -->
+    <link rel="stylesheet" href="index.styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="gameboy">
+        <div class="gameboy-body">
+            <header></header>
+            <audio id="startSound" src="./sounds/clickSound2.mp3"></audio>
+            <audio id="clickSound" src="./sounds/clickSound1.wav"></audio>
+            <audio id="bgMusic" src="./sounds/music.mp3" loop></audio>
+            <section class="screen">
+                <img class="character hidden" style="left:60px" src="./images/femaleCharacterKate.png"/>
+                <div class="img-container">
+                    <img id="start" class="start" src="./images/startScreen.gif" alt="" />
+                    <img id="scene1" class="img hidden" src="./images/scene1.png" alt="" />
+                    <div id="scene1Text" class="chatText scene1Text hidden">Kate wakes up and sees a text from Jon on her phone.</div>
+                </div>
+                <div class="img-container hidden">
+                    <div class="modalContainer">
+                        <div class="modal hidden">
+                            <p>Will you be my Valentine?</p>
+                            <button>YES</button><button>ALSO YES</button>
+                        </div>
+                    </div>
+                    <img class="img" src="./images/scene2.png" alt="" />
+                    <div id="scene2Text" class="chatText scene2Text">Kate meets Jon at the coffee shop and walks up to him to see what he wanted to ask.</div>
+                    <img class="male" src="./images/maleCharacterAsian.png" alt="" />
+                </div>
+                <div class="img-container hidden">
+                    <img class="img" src="./images/endScreenAsian2.jpg" alt="" />
+                    <div class="chatText">Kate exhales a sigh of relief and is happy that Jon asked. They enjoy a great Valentines Day together this year!</div>
+                </div>
+            </section>
+            <section class="actions">
+                <div class="directions">
+                    <button class="arrow-left" onclick="buttonLeft();playClickSound()"></button>
+                    <button class="arrow-top"></button>
+                    <button class="arrow-right" onclick="buttonRight();playClickSound()"></button>
+                    <button class="arrow-bottom"></button>
+                </div>
+                <div class="buttons">
+                    <button class="button-a" onclick="buttonA();playClickSound()"></button>
+                    <button class="button-b" onclick="buttonB();playClickSound()"></button>
+                </div>
+                <ul class="start-reset">
+                    <li><button class="start" onclick="selectButton()"></button></li>
+                    <li><button class="reset" onclick="startButton();playStartSound()"></button></li>
+                </ul>
+                <div class="points">
+                    <span>•••••</span><br>
+                    <span>•••••••</span><br>
+                    <span>•••••</span><br>
+                    <span>••••••</span><br>
+                    <span>••••</span>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>
